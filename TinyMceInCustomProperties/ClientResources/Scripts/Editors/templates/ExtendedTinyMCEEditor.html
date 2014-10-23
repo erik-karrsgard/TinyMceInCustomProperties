@@ -1,0 +1,23 @@
+﻿<div id="widget_${id}">
+    Ärvt värde<br />
+    <div class="epi-formsWidgetWrapper">
+        <div data-dojo-attach-point="divParentValue" class="dijitTextBox dijitTextArea dijitExpandingTextArea" style="width: 582px; height: 130px;">
+        </div>
+    </div>
+    <div id="parentLocalControlContainer-123454">
+        <div style="float:left; padding-left:200px; padding-right: 12px; margin-top: 20px;">
+            <input type="radio" name="inheritFromParentRadioButton" data-dojo-attach-point="inheritFromParentRadioButton">Använd ärvt värde<br>
+            <input type="radio" name="inheritFromParentRadioButton" data-dojo-attach-point="useLocalValueRadioButton">Använd eget värde
+        </div>
+        <div style="float:left; margin-top: 12px;">
+            <button data-dojo-type="dijit/form/Button" data-dojo-attach-point="inheritButton" style="height:26px;margin-top:12px;" type="button">&nbsp;▼&nbsp;</button>
+        </div>
+    </div>
+    <div style="clear: both;">
+        Eget värde<br />
+        <div style="display: inline-block" data-dojo-attach-point="stateNode, tooltipNode">
+            <textarea data-dojo-attach-point="editorFrame" id="${id}_editorFrame" style="border: none;"></textarea>
+        </div>
+        <div data-dojo-attach-point="dndOverlay" style="background: rgba(0, 0, 0, 0.01); position: absolute; left: 0; top: 0; right: 0; bottom: 0; display: none"></div>
+    </div>
+</div>
