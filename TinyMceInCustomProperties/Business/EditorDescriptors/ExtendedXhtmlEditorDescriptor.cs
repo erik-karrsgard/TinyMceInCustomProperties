@@ -1,11 +1,9 @@
-﻿using System.Diagnostics;
-using EPiServer;
+﻿using EPiServer;
 using EPiServer.Cms.Shell.Extensions;
 using EPiServer.Cms.Shell.UI.ObjectEditing;
 using EPiServer.Core;
 using EPiServer.Editor.TinyMCE;
 using EPiServer.ServiceLocation;
-using EPiServer.Shell;
 using EPiServer.Shell.ObjectEditing;
 using EPiServer.Shell.ObjectEditing.EditorDescriptors;
 using System;
