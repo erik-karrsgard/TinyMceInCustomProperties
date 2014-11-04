@@ -1,4 +1,6 @@
 ﻿define([
+    // dojo
+    "dojo/_base/declare",
 // epi
     "epi-cms/contentediting/editors/TinyMCEEditor",
 
@@ -7,6 +9,8 @@
 ],
 
 function (
+    //dojo
+    declare,
 // epi
     TinyMCEEditor,
 
@@ -28,6 +32,8 @@ function (
             this.connect(this.inheritButton, "onclick", "onInheritButtonClick");
             this.connect(this.inheritFromParentRadioButton, "onclick", "onInheritRadioButtonClick");
             this.connect(this.useLocalValueRadioButton, "onclick", "onInheritRadioButtonClick");
+
+            this.divParentValue.innerHTML = this._unencodedValue(this.parentValue);
         },
 
         onInheritButtonClick: function () {
@@ -54,6 +60,9 @@ function (
             //
             // tags:
             //    protected
+
+            var ed = this.getEditor(),
+                editableValue = newValue || "";
 
             var isInheritting = editableValue.charAt(0) == "1",
                 editableValue = this._unencodedValue(newValue || "");
@@ -105,7 +114,7 @@ function (
         _unencodedValue: function (orgValue) {
             var isSet = orgValue != null && orgValue !== undefined && orgValue.length >= 2 && orgValue.charAt(1) == ":";
             return isSet ? orgValue.substring(2) : orgValue;
-        },
+        }
 
     });
 });
